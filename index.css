@@ -1,89 +1,101 @@
-body{
-    width:100%;
-    height:1000px;
-    background-color:white;
-    padding:0;
-    margin:0;    
-    
-}
-.container1{
-    width:100%;
-    height: 300px;
-    background-color:mediumblue;
-    padding: 5px;
-    color: white;   
-    
-}
-.button{
-    background-color: mediumblue; 
-    color:white;      
-    border: none;
-}
-.para-1{
-    color:aquamarine;
-    font-size: 30px;
-}
-.outline{
-    background-color: mediumblue;
-    color: aquamarine;
-    border:1px solid white;    
-    border-radius: 5px;
-    size: 50px;
-    align-items: center;
-}
-.sone{
-    width: 200px;
-    height: 150px;
-    float: right;
-    background-color: white;
-    color:black;
-    padding: 20px;
-    border: 15px solid white;
-    border-radius: 10px;
-}
-.button4{
-    background-color:mediumblue;
-    width: 100px;
-    height: 40px;
-    border-radius: 5px;
-    color: white;
-}
-.para-2{
-    padding-top: 50px;
-    text-align: center;
-    font-size: 25px;
-}
-.para-3{
-    font-size: 25px;
-}
-.para-4{
-    color:blue;
-    font-size: 25px;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Dancing script";
 }
 html{
-    scroll-behavior: smooth;
+    font-size: 65%;
+    font-weight: bold;
 }
-.container2{
-    width:100%;
-    height: 200px;
-    background-color: mediumblue;
+.container{    
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    background-color:darkcyan;
+}
+.calendar{
+    width: 70rem;
+    height: 52rem;
+    background: radial-gradient(purple, red);
+}
+.month{
+    width: 100%;
+    background-color:darkblue;
     color: white;
-    padding-top: 5px;
-    
-}
-.para-5{
-    text-align: center;
-    font-size: 40px;
-}
-.para-6{
-    text-align: center;
-    font-size: 25px;
-}
-.container3{
-    font-size: 30px;
+    height: 12rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
 }
-.table{
+.month .prev,
+.month .next{
+    font-size: 6rem;
+    cursor: pointer;
+}
+.month h1{
+    font-size: 3rem;
+    cursor: pointer;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+}
+.month p{
+    font-size: 1.6rem;
+}
+
+.weekdays{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    position: absolute;
+}
+.weekdays div {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.1rem;
+    width: calc(45rem / 4.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.days {
     width:100%;
-    border: 5px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+    margin-top: 4rem;
+    background: linear-gradient(green, lightgreen);
+}
+.days div {
+    font-size: 3rem;
+    margin: 0.3rem;
+    width: calc(40rem / 4.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    color: blue;
+    height: 5rem;
+}
+.prev-date,
+.next-date{
+    opacity: 0.5;
+}
+.today{
+    background: lightblue;
+    color: #555
+}
+.days div:not(.today):hover{
+    border: 0.2rem solid;
+    background: darkgreen;
 }
